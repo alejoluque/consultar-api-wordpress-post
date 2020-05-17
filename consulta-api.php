@@ -24,7 +24,7 @@ function get_posts_general() {
 		// For each post.
 	
 		foreach ( $posts as $post ) {
-			// Use print_r($post); to get the details of the post and all available fields
+			
 			$img = esc_html( $post->featured_media );			
 			$img_post = wp_remote_get( 'https://www.dominio.com/wp-json/wp/v2/media/'.$img  );
 			$posts_img = json_decode( wp_remote_retrieve_body( $img_post ) );
